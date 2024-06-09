@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+header, section, footer {
+    padding: 20px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header {
+    text-align: center;
+}
+
+header:hover, section:hover, footer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+    color: #ff6347;
+}
+
+a {
+    color: #009688;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+/* Class and ID Selectors */
+/*#profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}*/
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
+    transition: none;
+    box-shadow: none;
+}
+
+#profile-pic:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.experience-item {
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.experience-item:hover {
+    border-color: #ff6347;
+}
+
+/* Apply a shading effect on hover for list items */
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #009688;
+    transition: color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #ffeb3b;
+    color: #444;
+}
+
+ul li:hover::before {
+    color: #ff6347;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    header, section, footer {
+        margin: 5px;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    header, section, footer {
+        margin: 2px;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    ul li {
+        padding-left: 15px;
+    }
+}
+
